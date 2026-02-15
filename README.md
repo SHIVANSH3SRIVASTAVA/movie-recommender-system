@@ -7,7 +7,7 @@ It suggests movies similar to the selected title and displays posters using the 
 
 ## 🚀 Live Demo
 
-🔗 https://movie-recommender-system-ss.streamlit.app
+🔗 https://movie-recommender-system-82fs.onrender.com
 
 ---
 
