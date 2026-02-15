@@ -4,9 +4,12 @@ import pandas as pd
 import requests
 
 def fetch_poster(movie_id):
-    response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=8124f2c79d43c248fd8af8fe030151a4&language=en-US'.format(movie_id))
+    api_key = st.secrets["TMDB_API_KEY"]
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
+    response = requests.get(url)
     data = response.json()
     return "https://image.tmdb.org/t/p/w500/" + data['poster_path']
+
 
 def recommend(selected_movie_name):
     movie_index = movies[movies['title']==selected_movie_name].index[0]
